@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:name="lima.wallyson.com.br.flagquiz.SettingsActivityFragment"
+        android:id="@+id/settingsActivityFragment"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:name="lima.wallyson.com.br.flagquiz.MainActivityFragment"
+        android:id="@+id/quizFragment"
+        android:layout_weight="2"
+        tools:layout="@layout/fragment_main" />
+</LinearLayout>
