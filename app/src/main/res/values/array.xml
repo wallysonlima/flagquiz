@@ -15,7 +15,7 @@
         <item>Europe</item>
         <item>North America</item>
         <item>Oceania</item>
-        <item>South_America</item>
+        <item>South America</item>
     </string-array>
 
     <string-array name="guesses_list">

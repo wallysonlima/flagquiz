@@ -16,14 +16,14 @@ import android.widget.Toast;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-    //keys  for reading data from SharedPreferences
+    //keys for reading data from SharedPreferences
     public static final String CHOICES = "pref_numberOfChoices";
-    public static final String REGIONS = "pre_regionsToInclude";
+    public static final String REGIONS = "pref_regionsToInclude";
 
     private boolean phoneDevice = true; // used to force portrait mode
     private boolean preferencesChanged = true; // did preferences change?
 
-    // confiugure the MainAcitivity
+    // configure the MainActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
