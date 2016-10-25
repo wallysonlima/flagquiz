@@ -2,10 +2,11 @@ package lima.wallyson.com.br.flagquiz;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -35,9 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // register listener for SharedPreferences changes
         PreferenceManager.getDefaultSharedPreferences(this).
-                registerOnSharedPreferenceChangeListener(
-                        preferencesChangeListener
-                );
+                registerOnSharedPreferenceChangeListener(preferencesChangeListener);
 
         // determine screen size
         int screenSize = getResources().getConfiguration().screenLayout &
@@ -101,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // listener for changes to the app's SharedPreferences
-    private OnSharedOPreferenceChangeListener preferencesChangeListener =
-            new SharedPreferences.OnSharedPreferenceChangeListener() {
+    private OnSharedPreferenceChangeListener preferencesChangeListener =
+            new OnSharedPreferenceChangeListener() {
                 // called when the user changes the app's preferences
                 @Override
                 public void onSharedPreferenceChanged(
@@ -120,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                                 sharedPreferences.getStringSet(REGIONS, null);
 
                         if (regions != null && regions.size() > 0) {
-                            quizFragment.updateRegions(sharedOPreferences);
+                            quizFragment.updateRegions(sharedPreferences);
                             quizFragment.resetQuiz();
                         } else {
                             // must select one region--set North America as default
