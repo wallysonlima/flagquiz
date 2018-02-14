@@ -1,4 +1,4 @@
-# FlagQuiz
+# Flag Quiz
 
 It is a game where you have to guess the name of the country of the flag, this app use fragments.
 Example of book "Android 6 for programmers".
